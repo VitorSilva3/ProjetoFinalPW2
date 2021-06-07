@@ -1,0 +1,115 @@
+
+h2{
+  color: white;
+}
+
+h1{
+  color: white;
+}
+
+.split {
+  height: 101%;
+  width: 33.3333%;
+  position: fixed;
+  z-index: 1;
+  top:-0;
+  overflow-x: hidden;
+}
+
+.left {
+  left: 0;
+  top:-800px;
+  animation-name: apareceresquerda;
+  animation-duration: 3s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+}
+
+.right {
+  right: 0;
+  top:-800px;
+  animation-name: aparecerdireita;
+  animation-duration: 3s;
+  animation-delay: 15s;
+  animation-fill-mode: forwards;
+}
+
+.center {
+  right:455.5px;
+  left:auto;
+  top:-800px;
+  animation-name: aparecercentro;
+  animation-duration: 3s;
+  animation-delay: 12.5s;
+  animation-fill-mode: forwards;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered #avatar {
+  width: 150px;
+  border-radius: 50%;
+}
+
+#fundo{
+  width: 500px;
+  height: 625px;
+}
+
+#botao{
+  position: relative;
+  top:22.5vh;
+  visibility: hidden;
+  animation-name: aparecerbotao;
+  animation-duration: 3s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+
+#botao img{
+  width: 25px;
+}
+
+#gif{
+  position: relative;
+  left: 70vh;
+  top:7.5vh;
+}
+
+#texto{
+  color: red;
+  text-align: center;
+  position: relative;
+  bottom: 25vh;
+  animation-name: aparecertexto;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apareceresquerda {
+  100%  {top: 0px;}
+}
+
+@keyframes aparecercentro {
+  100%  {top: 0px;}
+}
+
+@keyframes aparecerdireita {
+  100%  {top: 0px;}
+}
+
+@keyframes aparecerbotao {
+  100%  {visibility: visible;}
+}
+
+@keyframes aparecertexto {
+  100%  {top:10vh;}
+}
+
+
