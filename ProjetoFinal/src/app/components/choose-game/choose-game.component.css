@@ -1,0 +1,40 @@
+.split {
+  height: 101%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: -0;
+  overflow-x: hidden;
+}
+
+.left {
+  left: 0;
+
+}
+
+.right {
+  right: 0;
+
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+#fundo{
+  width: 683px;
+  height: 625px;
+}
+
+h2{
+  color:white;
+}

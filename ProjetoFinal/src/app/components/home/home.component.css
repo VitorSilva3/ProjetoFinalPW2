@@ -21,7 +21,7 @@ h1{
   top:-800px;
   animation-name: apareceresquerda;
   animation-duration: 3s;
-  animation-delay: 10s;
+  animation-delay: 5s;
   animation-fill-mode: forwards;
 }
 
@@ -30,7 +30,7 @@ h1{
   top:-800px;
   animation-name: aparecerdireita;
   animation-duration: 3s;
-  animation-delay: 15s;
+  animation-delay: 10s;
   animation-fill-mode: forwards;
 }
 
@@ -40,7 +40,7 @@ h1{
   top:-800px;
   animation-name: aparecercentro;
   animation-duration: 3s;
-  animation-delay: 12.5s;
+  animation-delay: 7.5s;
   animation-fill-mode: forwards;
 }
 
@@ -68,7 +68,7 @@ h1{
   visibility: hidden;
   animation-name: aparecerbotao;
   animation-duration: 3s;
-  animation-delay: 9s;
+  animation-delay: 14s;
   animation-fill-mode: forwards;
 }
 
@@ -77,19 +77,9 @@ h1{
 }
 
 #gif{
-  position: relative;
-  left: 70vh;
-  top:7.5vh;
-}
+  width: 1350px;
+  height: 605px;
 
-#texto{
-  color: red;
-  text-align: center;
-  position: relative;
-  bottom: 25vh;
-  animation-name: aparecertexto;
-  animation-duration: 10s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes apareceresquerda {
@@ -108,8 +98,5 @@ h1{
   100%  {visibility: visible;}
 }
 
-@keyframes aparecertexto {
-  100%  {top:10vh;}
-}
 
 
