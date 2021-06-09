@@ -54,6 +54,7 @@ h1{
 
 .centered #avatar {
   width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
@@ -76,10 +77,37 @@ h1{
   width: 25px;
 }
 
-#gif{
-  width: 1350px;
-  height: 605px;
+#texto{
+  font-size: 100px;
+  text-align: center;
+  position: relative;
+  top:10vh;
+  animation-name: mudarcor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 
+#texto1{
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  top:-60vh;
+  animation-name: aparecertexto;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+#pistao{
+  position: relative;
+  left: 102.5vh;
+  top:25vh;
+  width: 75px;
+  animation-name: aparecerpistao;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
 }
 
 @keyframes apareceresquerda {
@@ -96,6 +124,24 @@ h1{
 
 @keyframes aparecerbotao {
   100%  {visibility: visible;}
+}
+
+@keyframes mudarcor {
+  0% {color: white;}
+  25% {color: red;}
+  50% {color: white;}
+  75% {color: red;}
+  100%  {color: white;}
+}
+
+@keyframes aparecertexto {
+  50% {top:31vh;}
+  100%  {top:0vh;}
+}
+
+@keyframes aparecerpistao {
+  75% {visibility: visible;}
+  100%  {visibility: hidden;}
 }
 
 

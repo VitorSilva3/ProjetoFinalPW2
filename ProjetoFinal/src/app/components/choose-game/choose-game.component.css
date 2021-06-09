@@ -8,13 +8,20 @@
 }
 
 .left {
-  left: 0;
+  left: 1500px;
+  animation-name: apareceresquerda;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 
 }
 
 .right {
-  right: 0;
-
+  right: 1500px;
+  animation-name: aparecerdireita;
+  animation-duration: 3s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
 }
 
 .centered {
@@ -25,11 +32,6 @@
   text-align: center;
 }
 
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
-
 #fundo{
   width: 683px;
   height: 625px;
@@ -37,4 +39,12 @@
 
 h2{
   color:white;
+}
+
+@keyframes apareceresquerda {
+  100%  {left: 0px;}
+}
+
+@keyframes aparecerdireita {
+  100%  {right: 0px;}
 }
