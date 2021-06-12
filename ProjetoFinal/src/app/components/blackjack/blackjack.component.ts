@@ -11,5 +11,7 @@ export class BlackjackComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  falas : string ="Bem vindo Bruno Mendes ou Vitor Silva, queres um gelado?";
+
 
 }
