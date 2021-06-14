@@ -1,18 +1,51 @@
-<p>blackjack works!</p>
+
+<p id='p-valor_user'>Valor utilizador: {{dinheiro_user}}</p>
+<p id='p-valor_apostado'>Valor apostado: {{valor_apostado}}</p>
 
 <div id="table">
 
 
+  <input type="image" id="clearBet" alt="clearBet" src="https://cdn.discordapp.com/attachments/817360845024657438/853302068063240262/clear.png" (click)="clearBet()">
+
+
+  <input type="image" id="deal" alt="deal"  src="https://cdn.discordapp.com/attachments/817360845024657438/853302429588127794/deal.png" (click)="deal()">
+  <input type="image" id="hit" alt="hit"  src="https://cdn.discordapp.com/attachments/817360845024657438/853305179218772008/hit.png" (click)="hit()">
+  <input type="image" id="stand" alt="stand"  src="https://cdn.discordapp.com/attachments/817360845024657438/853305515114889256/stand.png" (click)="stand()">
+
+  <div id="dealer-cards-box">
+
+    <img class="img-card" src="https://deckofcardsapi.com/static/img/7D.png">
+    <img class="img-card" src="https://deckofcardsapi.com/static/img/7D.png">
+    <img class="img-card" src="https://opengameart.org/sites/default/files/card%20back%20black.png">
+    <img class="img-card" src="https://opengameart.org/sites/default/files/card%20back%20black.png">
+
+  </div>
+
+  <div id="user-cards-box">
+
+    <img class="img-card" src="https://deckofcardsapi.com/static/img/7D.png"  #playerCards1>
+    <img class="img-card" src="https://deckofcardsapi.com/static/img/7D.png">
+    <img class="img-card" src="https://opengameart.org/sites/default/files/card%20back%20black.png">
+    <img class="img-card" src="https://opengameart.org/sites/default/files/card%20back%20black.png">
+
+  </div>
+
+
+  <div id="coin-box">
+    <input type="image" id="coin1" alt="coin1" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308595781238844/1.png" (click)="bet(1)">
+    <input type="image" id="coin2" alt="coin2" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308597604450304/2.png" (click)="bet(2)">
+    <input type="image" id="coin5" alt="coin5" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308599677747200/5.png" (click)="bet(5)">
+    <input type="image" id="coin10" alt="coin10" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308602558185502/10.png" (click)="bet(10)">
+    <input type="image" id="coin20" alt="coin20" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308605070966814/20.png" (click)="bet(20)">
+    <input type="image" id="coin50" alt="coin50" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308607628836874/50.png" (click)="bet(50)">
+    <input type="image" id="coin100" alt="coin100" class="coin" src="https://cdn.discordapp.com/attachments/817360845024657438/853308610217639986/100.png" (click)="bet(100)">
+
+
+  </div>
+
+
+
 
 </div>
 
-<div id="dealer-box">
 
-<img src="https://www.appku.win/wp-content/uploads/2021/05/allbet.png" id="dealer-img">
-
-<div id="falas-box">
-
-<p id="fala">{{falas}}</p>
-</div>
-
-</div>

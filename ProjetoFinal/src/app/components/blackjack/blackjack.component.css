@@ -1,6 +1,19 @@
+#p-valor_apostado{
+  color: red;
+  position: fixed;
+  left: 25vw;
+  top:5vh;
+}
+#p-valor_user{
+  color: red;
+  position: fixed;
+  left: 25vw;
+}
+
 p{
   color: red;
 }
+
 
 #table{
   position: fixed;
@@ -14,34 +27,78 @@ p{
 
 }
 
-#dealer-box{
-  background-color: white;
-  position: fixed;
-  top: 10vh;
-  left: 76vw;
-  height: 70vh;
-  width: 25vw;
-}
 
-#dealer-img{
+
+#coin-box{
   position: absolute;
   bottom: 0%;
-  right: -10%;
+  left: 0%;
+  width: 50%;
+  height: 15%;
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+}
+.coin {
+  width: 70%;
+  height: 70%;
 }
 
-#falas-box{
+#stand{
   position: absolute;
-  top:8vh;
-
-  width: 10vw;
-  height: 20vh;
-  background-image: url('https://icons555.com/images/icons-black/image_icon_speech_bubble_pic_512x512.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  bottom: 20%;
+  left: 0%;
 }
 
-#fala{
+#hit{
+position: absolute;
+bottom: 40%;
+left: 0%;
+}
+
+#deal
+{
   position: absolute;
-  top: 20%;
+  bottom: 60%;
+  left: 0%;
+}
+
+
+#dealer-cards-box{
+  position: absolute;
+  top: 0%;
   left: 10%;
+  width: 30%;
+  height: 40%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: red;
+
+}
+
+#user-cards-box{
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 30%;
+  height: 40%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: red;
+
+}
+
+.img-card{
+
+  height: 50%;
+  width: 50%;
 }
