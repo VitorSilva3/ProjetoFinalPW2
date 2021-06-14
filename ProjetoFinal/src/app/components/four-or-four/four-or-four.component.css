@@ -1,0 +1,26 @@
+#gif1{
+  position:relative;
+  top:20vh;
+  left: 72.5vh;
+}
+
+#gif2{
+  position:relative;
+  width: 200px;
+  right: 60vh;
+  top:40vh;
+}
+
+#gif3{
+  position:relative;
+  width: 300px;
+  left: 60vh;
+  bottom:17.5vh;
+}
+
+#texto{
+  color: white;
+  position:relative;
+  top: 20vh;
+  text-align: center;
+}
