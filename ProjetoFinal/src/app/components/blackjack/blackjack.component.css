@@ -51,12 +51,14 @@ p{
   position: absolute;
   bottom: 20%;
   left: 0%;
+  opacity: 0;
 }
 
 #hit{
 position: absolute;
 bottom: 40%;
 left: 0%;
+opacity: 0;
 }
 
 #deal
@@ -78,8 +80,6 @@ left: 0%;
   flex-direction: row;
   align-items: center;
 
-  background-color: red;
-
 }
 
 #user-cards-box{
@@ -93,8 +93,6 @@ left: 0%;
   flex-direction: row;
   align-items: center;
 
-  background-color: red;
-
 }
 
 .img-card{
@@ -102,3 +100,133 @@ left: 0%;
   height: 50%;
   width: 50%;
 }
+
+@media (max-width: 575px) {
+  #p-valor_apostado{
+    color:purple;
+  }
+
+  #table{
+    background-color: green;
+    background-image: url('https://wallpapercave.com/wp/wp4900598.png');
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    left: 0%;
+  }
+  #dealer-cards-box,#user-cards-box{
+    left: 25%;
+  }
+  #coin-box{
+    bottom: 0%;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 20vh;
+  }
+  .coin {
+    width: 25%;
+    height: 35%;
+  }
+  #stand{
+
+    height: 15%;
+    width: 20%;
+  }
+
+  #hit{
+    height: 15%;
+    width: 20%;
+  }
+
+  #deal
+  {
+    height: 15%;
+    width: 20%;
+  }
+
+  #clearBet{
+    height: 15%;
+    width: 20%;
+  }
+
+
+
+}
+
+@media (min-width: 576px) {
+  #p-valor_apostado{
+    color:brown;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+  #p-valor_apostado{
+    color: yellow;
+  }
+
+  #coin-box{
+    bottom: 10%;
+  }
+  #dealer-cards-box{
+    top: 0%;
+    left: 20%;
+    width: 30%;
+    height: 40%;
+
+  }
+
+  #user-cards-box{
+    top: 40%;
+    left: 20%;
+    width: 30%;
+    height: 40%;
+
+  }
+}
+
+
+@media (min-width: 992px) {
+  #p-valor_apostado{
+    color:green;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  #p-valor_apostado{
+    color: blue;
+  }
+
+
+
+ }
+
+
+@media (min-width: 1400px) {
+  #p-valor_apostado{
+    color:turquoise;
+  }
+  #coin-box{
+    bottom: 0%;
+  }
+  #dealer-cards-box{
+    top: 0%;
+    left: 10%;
+    width: 30%;
+    height: 40%;
+
+  }
+
+  #user-cards-box{
+    top: 40%;
+    left: 10%;
+    width: 30%;
+    height: 40%;
+
+  }
+ }
