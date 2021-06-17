@@ -48,3 +48,57 @@ h2{
 @keyframes aparecerdireita {
   100%  {right: 0px;}
 }
+
+@media only screen and (max-device-width: 640px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .split {
+    height: 101%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 1500px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+  }
+
+  .right {
+    right: 1500px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #fundo{
+    width: 683px;
+    height: 625px;
+  }
+
+  h2{
+    color:white;
+  }
+
+  @keyframes apareceresquerda {
+    100%  {left: 0px;}
+  }
+
+}
