@@ -1,9 +1,8 @@
-
-h2{
+h2 {
   color: white;
 }
 
-h1{
+h1 {
   color: white;
 }
 
@@ -12,13 +11,13 @@ h1{
   width: 33.3333%;
   position: fixed;
   z-index: 1;
-  top:-0;
+  top: -0;
   overflow-x: hidden;
 }
 
 .left {
   left: 0;
-  top:-800px;
+  top: -800px;
   animation-name: apareceresquerda;
   animation-duration: 3s;
   animation-delay: 5s;
@@ -27,7 +26,7 @@ h1{
 
 .right {
   right: 0;
-  top:-800px;
+  top: -800px;
   animation-name: aparecerdireita;
   animation-duration: 3s;
   animation-delay: 10s;
@@ -35,9 +34,9 @@ h1{
 }
 
 .center {
-  right:455.5px;
-  left:auto;
-  top:-800px;
+  right: 455.5px;
+  left: auto;
+  top: -800px;
   animation-name: aparecercentro;
   animation-duration: 3s;
   animation-delay: 7.5s;
@@ -58,14 +57,14 @@ h1{
   border-radius: 50%;
 }
 
-#fundo{
+#fundo {
   width: 500px;
   height: 625px;
 }
 
-#botao{
+#botao {
   position: relative;
-  top:22.5vh;
+  top: 22.5vh;
   visibility: hidden;
   animation-name: aparecerbotao;
   animation-duration: 3s;
@@ -73,35 +72,35 @@ h1{
   animation-fill-mode: forwards;
 }
 
-#botao img{
+#botao img {
   width: 25px;
 }
 
-#texto{
+#texto {
   font-size: 100px;
   text-align: center;
   position: relative;
-  top:10vh;
+  top: 10vh;
   animation-name: mudarcor;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
-#texto1{
+#texto1 {
   font-size: 35px;
   text-align: center;
   position: relative;
-  top:-60vh;
+  top: -60vh;
   animation-name: aparecertexto;
   animation-duration: 3s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 
-#pistao{
+#pistao {
   position: relative;
   left: 102.5vh;
-  top:25vh;
+  top: 25vh;
   width: 75px;
   animation-name: aparecerpistao;
   animation-duration: 1s;
@@ -111,182 +110,1071 @@ h1{
 }
 
 @keyframes apareceresquerda {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecercentro {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecerdireita {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecerbotao {
-  100%  {visibility: visible;}
-}
-
-@keyframes mudarcor {
-  0% {color: white;}
-  25% {color: red;}
-  50% {color: white;}
-  75% {color: red;}
-  100%  {color: white;}
-}
-
-@keyframes aparecertexto {
-  50% {top:31vh;}
-  100%  {top:0vh;}
-}
-
-@keyframes aparecerpistao {
-  75% {visibility: visible;}
-  100%  {visibility: hidden;}
-}
-
-@media only screen and (max-device-width: 640px) {
-
-
-h2{
-  color: white;
-}
-
-h1{
-  color: white;
-}
-
-.split {
-  height: 101%;
-  width: 101%;
-  position: fixed;
-  z-index: 1;
-  top:-0;
-  overflow-x: hidden;
-}
-
-.left {
-  left: 0;
-  top:-800px;
-  animation-name: apareceresquerda;
-  animation-duration: 3s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-}
-
-.right {
-  right: 0;
-  top:-800px;
-  animation-name: aparecerdireita;
-  animation-duration: 3s;
-  animation-delay: 10s;
-  animation-fill-mode: forwards;
-}
-
-.center {
-  left:0;
-  top:-800px;
-  animation-name: aparecercentro;
-  animation-duration: 3s;
-  animation-delay: 7.5s;
-  animation-fill-mode: forwards;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.centered #avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-#fundo{
-  width: 500px;
-  height: 640px;
-}
-
-#botao{
-  position: relative;
-  top:22.5vh;
-  visibility: hidden;
-  animation-name: aparecerbotao;
-  animation-duration: 3s;
-  animation-delay: 14s;
-  animation-fill-mode: forwards;
-}
-
-
-
-#texto{
-  font-size: 50px;
-  text-align: center;
-  position: relative;
-  top:25vh;
-  animation-name: mudarcor;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-#texto1{
-  font-size: 35px;
-  text-align: center;
-  position: relative;
-  top:-60vh;
-  animation-name: aparecertexto;
-  animation-duration: 3s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards;
-}
-
-#pistao{
-  position: relative;
-  left: 22.5vh;
-  top:49vh;
-  width: 75px;
-  animation-name: aparecerpistao;
-  animation-duration: 1s;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-  visibility: hidden;
-}
-
-@keyframes apareceresquerda {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecercentro {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecerdireita {
-  100%  {top: 0px;}
-}
-
-@keyframes aparecerbotao {
-  100%  {visibility: visible;}
-}
-
-@keyframes mudarcor {
-  0% {color: white;}
-  25% {color: red;}
-  50% {color: white;}
-  75% {color: red;}
-  100%  {color: white;}
-}
-
-@keyframes aparecertexto {
-  50% {top:56vh;}
-  100%  {top:22.5vh;}
-}
-
-@keyframes aparecerpistao {
-  75% {visibility: visible;}
-  100%  {visibility: hidden;}
-}
-
+  100% {
+    top: 0px;
   }
+}
+
+@keyframes aparecercentro {
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes aparecerdireita {
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes aparecerbotao {
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes mudarcor {
+  0% {
+    color: white;
+  }
+  25% {
+    color: red;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: red;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes aparecertexto {
+  50% {
+    top: 31vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes aparecerpistao {
+  75% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -800px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -800px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -800px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 640px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 22.5vh;
+    top: 49vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 56vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 731px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -800px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -800px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -800px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 740px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 22.5vh;
+    top: 55vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 60vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 823px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -850px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -850px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -850px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 825px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 21vh;
+    top: 60vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 65vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -850px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -850px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -850px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 825px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 21vh;
+    top: 42.5vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 50vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -850px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -850px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -850px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 825px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 21vh;
+    top: 51vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 57.5vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .split {
+    height: 101%;
+    width: 101%;
+    position: fixed;
+    z-index: 1;
+    top: -0;
+    overflow-x: hidden;
+  }
+
+  .left {
+    left: 0;
+    top: -800px;
+    animation-name: apareceresquerda;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+
+  .right {
+    right: 0;
+    top: -800px;
+    animation-name: aparecerdireita;
+    animation-duration: 3s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+  }
+
+  .center {
+    left: 0;
+    top: -800px;
+    animation-name: aparecercentro;
+    animation-duration: 3s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .centered #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  #fundo {
+    width: 500px;
+    height: 740px;
+  }
+
+  #botao {
+    position: relative;
+    top: 22.5vh;
+    visibility: hidden;
+    animation-name: aparecerbotao;
+    animation-duration: 3s;
+    animation-delay: 14s;
+    animation-fill-mode: forwards;
+  }
+
+  #texto {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    animation-name: mudarcor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  #texto1 {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -60vh;
+    animation-name: aparecertexto;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  #pistao {
+    position: relative;
+    left: 22.5vh;
+    top: 55vh;
+    width: 75px;
+    animation-name: aparecerpistao;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+  }
+
+  @keyframes apareceresquerda {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecercentro {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerdireita {
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes aparecerbotao {
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes mudarcor {
+    0% {
+      color: white;
+    }
+    25% {
+      color: red;
+    }
+    50% {
+      color: white;
+    }
+    75% {
+      color: red;
+    }
+    100% {
+      color: white;
+    }
+  }
+
+  @keyframes aparecertexto {
+    50% {
+      top: 60vh;
+    }
+    100% {
+      top: 22.5vh;
+    }
+  }
+
+  @keyframes aparecerpistao {
+    75% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+}
+
+

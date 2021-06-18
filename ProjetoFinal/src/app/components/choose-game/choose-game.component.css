@@ -50,10 +50,6 @@ h2{
 }
 
 @media only screen and (max-device-width: 640px) {
-  html {
-    scroll-behavior: smooth;
-  }
-
   .split {
     height: 101%;
     width: 100%;
@@ -90,7 +86,7 @@ h2{
 
   #fundo{
     width: 683px;
-    height: 625px;
+    height: 640px;
   }
 
   h2{
