@@ -1,1 +1,12 @@
-<p>crypto-game works!</p>
+<div>
+  <div>
+    <h1> €</h1>
+    <a (click)="btn()"><h2>BITCOIN: </h2></a>
+    <a (click)="eth()"><h2>ETHEREUM: </h2></a>
+  </div>
+  <div *ngFor="let item of informacoes">
+    <div>
+      <p>{{item.preco}}</p>
+    </div>
+  </div>
+</div>
