@@ -1,12 +1,12 @@
 <div>
   <div>
-    <h1> €</h1>
-    <a (click)="btn()"><h2>BITCOIN: </h2></a>
-    <a (click)="eth()"><h2>ETHEREUM: </h2></a>
+    <h1>{{informacoes[0].Dinheiro}} €</h1>
+    <a (click)="btn()"><h2>BITCOIN - {{informacoes[0].Bitcoins}} - {{precoBtn.price}}</h2></a>
+    <a (click)="eth()"><h2>ETHEREUM - {{informacoes[0].Ethereum}} - {{precoEth.price}}</h2></a>
   </div>
-  <div *ngFor="let item of informacoes">
-    <div>
-      <p>{{item.preco}}</p>
+  <div>
+    <div *ngFor="let item of mercado">
+      <h3>{{item.market}} - {{item.price}} - {{item.volume}}</h3>
     </div>
   </div>
 </div>
