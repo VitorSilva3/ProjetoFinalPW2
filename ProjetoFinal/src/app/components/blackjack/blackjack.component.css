@@ -1,3 +1,4 @@
+
 #p-valor_apostado{
   color: red;
   position: fixed;
@@ -157,20 +158,35 @@ opacity: 0;
 }
 
 @media (min-width: 576px) {
-  #p-valor_apostado{
-    color:brown;
-  }
+
 
 }
 
 
 @media (min-width: 768px) {
-  #p-valor_apostado{
-    color: yellow;
+
+
+  #table{
+    top: 10vh;
+    left: 0vw;
+    width: 100vw;
+    height: 90vh;
+    background-image: url("https://i.pinimg.com/originals/ce/2b/78/ce2b78a05838ef311c0868bb2fca0494.gif");
+    background-size: cover;
   }
 
   #coin-box{
-    bottom: 10%;
+    bottom: 5%;
+
+    width: 100vw;
+  height: 15%;
+
+
+
+  }
+  .coin {
+    width: 25%;
+    height: 65%;
   }
   #dealer-cards-box{
     top: 0%;
@@ -187,13 +203,44 @@ opacity: 0;
     height: 40%;
 
   }
+
+
 }
 
 
 @media (min-width: 992px) {
   #p-valor_apostado{
-    color:green;
+
+    font-size: x-large;
   }
+  #p-valor_user{
+    color: red;
+    font-size: x-large;
+
+  }
+
+  #stand{
+
+    height: 10%;
+    width: 17%;
+  }
+
+  #hit{
+    height: 10%;
+    width: 17%;
+  }
+
+  #deal
+  {
+    height: 10%;
+    width: 17%;
+  }
+
+  #clearBet{
+    height: 10%;
+    width: 17%;
+  }
+
 }
 
 
@@ -207,26 +254,123 @@ opacity: 0;
  }
 
 
-@media (min-width: 1400px) {
+ @media (min-width: 1400px) {
   #p-valor_apostado{
-    color:turquoise;
+    color: red;
+    position: fixed;
+    left: 25vw;
+    top:5vh;
+    font-size: medium
   }
+  #p-valor_user{
+    color: red;
+    position: fixed;
+    left: 25vw;
+    font-size: medium
+  }
+
+  p{
+    color: red;
+  }
+
+
+  #table{
+    position: fixed;
+    top: 10vh;
+    left: 25vw;
+    width: 70vw;
+    height: 70vh;
+    background-image: url('https://img.freepik.com/free-photo/jack-spade-heart-ace-card-with-casino-chip-stack-green-poker-table_23-2147881160.jpg?size=626&ext=jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+
+
+
   #coin-box{
+    position: absolute;
     bottom: 0%;
+    left: 0%;
+    width: 50%;
+    height: 15%;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
   }
+  .coin {
+    width: 70%;
+    height: 70%;
+  }
+
+  #stand{
+    position: absolute;
+    bottom: 20%;
+    left: 0%;
+    opacity: 0;
+    height: 10%;
+    width: 7%;
+
+  }
+
+  #hit{
+  position: absolute;
+  bottom: 40%;
+  left: 0%;
+  opacity: 0;
+  height: 10%;
+  width: 7%;
+  }
+
+  #deal
+  {
+    position: absolute;
+    bottom: 60%;
+    left: 0%;
+    height: 10%;
+    width: 7%;
+  }
+  #clearBet{
+    height: 10%;
+    width: 7%;
+  }
+
+
+
   #dealer-cards-box{
+    position: absolute;
     top: 0%;
     left: 10%;
     width: 30%;
     height: 40%;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
   }
 
   #user-cards-box{
+    position: absolute;
     top: 40%;
     left: 10%;
     width: 30%;
     height: 40%;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
   }
+
+  .img-card{
+
+    height: 50%;
+    width: 50%;
+  }
+
+
  }

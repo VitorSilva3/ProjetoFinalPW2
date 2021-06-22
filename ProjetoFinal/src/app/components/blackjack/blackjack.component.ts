@@ -95,11 +95,20 @@ export class BlackjackComponent implements OnInit {
     {
       return alert("aposta alguma coisa");
     }
-    this.canBet = false;
+
+    if(this.Decks.baralho_id== undefined)
+    {
+      let anwser;
+      this.Decks.getBaralho().subscribe(data =>{anwser=data;console.log(anwser);this.Decks.baralho_id = anwser.deck_id;console.log(this.Decks.baralho_id);this.Decks.getCards().subscribe(data => {this.resultado=data;console.log(this.resultado);this.validarNCartas(this.resultado);this.criarCartas(this.resultado);this.organize()});});
+    }else {
       this.Decks.getCards().subscribe(data => {this.resultado=data;console.log(this.resultado);this.validarNCartas(this.resultado);this.criarCartas(this.resultado);this.organize()});
+    }
+    this.canBet = false;
+
       this.hitButton.nativeElement.style.opacity = 100;
       this.standButton.nativeElement.style.opacity = 100;
       this.clearButton.nativeElement.style.opacity = 0;
+      this.dealButton.nativeElement.style.opacity =0;
   }
 
   validarNCartas(resultado:any)
@@ -266,7 +275,10 @@ export class BlackjackComponent implements OnInit {
         {
           console.log("empate");
           this.EndGame("draw");
-        } else console.log("puta de baralho fudido o dealer tem 4 cartas e ainda consegue ter menos pontos");
+        } else{
+          console.log("puta de baralho fudido o dealer tem 4 cartas e ainda consegue ter menos pontos");
+          this.EndGame("p-win");
+        }
 
 
       }
@@ -357,24 +369,53 @@ export class BlackjackComponent implements OnInit {
         console.log("Player ganhou")
 
         this.dinheiro_user += this.valor_apostado;
-        return alert(`O player ganhou com ${this.pontosPlayer} pontos.`);
+        alert(`O player ganhou com ${this.pontosPlayer} pontos.`);
       } else if (result == "p-lost"){
 
         this.dinheiro_user -= this.valor_apostado;
-        return alert(`O dealer ganhou com ${this.pontosDealer} pontos.`);
+         alert(`O dealer ganhou com ${this.pontosDealer} pontos.`);
 
       } else if (result == "draw")
       {
-        return alert(`Que belo empate`);
+        alert(`Que belo empate`);
       } else if (result == "Darrebenta")
       {
-        return alert(`O dealer arrebentou com ${this.pontosDealer} pontos.`);
+        this.dinheiro_user += this.valor_apostado;
+        alert(`O dealer arrebentou com ${this.pontosDealer} pontos.`);
       }else if (result == "Parrebenta")
       {
-        return alert(`O player arrebentou com ${this.pontosPlayer} pontos.`);
+        this.dinheiro_user -= this.valor_apostado;
+        alert(`O player arrebentou com ${this.pontosPlayer} pontos.`);
       }
+
+      setTimeout(()=>{this.Restart()},2000);
 
 
   }
+
+  Restart()
+  {
+      this.valor_apostado =0;
+      this.canBet = true;
+    this.playerCards = [];
+    this.dealerCards = [];
+
+      this.dCard1.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.dCard2.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.dCard3.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.dCard4.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+
+      this.pCard1.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.pCard2.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.pCard3.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+      this.pCard4.nativeElement.src = "https://opengameart.org/sites/default/files/card%20back%20black.png";
+
+      this.hitButton.nativeElement.style.opacity = 0;
+      this.standButton.nativeElement.style.opacity = 0;
+      this.clearButton.nativeElement.style.opacity = 100;
+      this.dealButton.nativeElement.style.opacity =100;
+
+  }
+
 
 }

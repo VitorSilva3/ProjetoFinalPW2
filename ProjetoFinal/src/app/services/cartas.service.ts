@@ -8,12 +8,22 @@ export class CartasService {
 
   constructor(private httpAsk : HttpClient) { }
 
+link_pedido_baralho = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
 
-  link_pedido_cartas = "https://deckofcardsapi.com/api/deck/kcnvzi7fbyo4/draw/?count=4";
-  link_pedido_hit = "https://deckofcardsapi.com/api/deck/kcnvzi7fbyo4/draw/?count=1";
-  link_pedido_shuffle = "https://deckofcardsapi.com/api/deck/kcnvzi7fbyo4/shuffle/";
+baralho_id: string;
 
+  link_pedido_cartas;
+  link_pedido_hit;
+  link_pedido_shuffle;
+
+
+  getBaralho(){
+    return this.httpAsk.get(
+      this.link_pedido_baralho,
+      );
+  }
   getCards(){
+    this.link_pedido_cartas = `https://deckofcardsapi.com/api/deck/${this.baralho_id}/draw/?count=4`;
     return this.httpAsk.get(
       this.link_pedido_cartas,
       );
@@ -21,6 +31,7 @@ export class CartasService {
 
 
   hit(){
+    this.link_pedido_hit = `https://deckofcardsapi.com/api/deck/${this.baralho_id}/draw/?count=1`;
     return this.httpAsk.get(
       this.link_pedido_hit,
       );
@@ -28,6 +39,7 @@ export class CartasService {
 
   shuffle()
   {
+    this.link_pedido_shuffle = `https://deckofcardsapi.com/api/deck/${this.baralho_id}/shuffle/`;
     return this.httpAsk.get(
       this.link_pedido_shuffle,
       );
