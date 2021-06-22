@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ConsoleReporter } from 'jasmine';
+import { Router } from '@angular/router';
 import { MoedasService } from 'src/app/services/moedas.service';
 
 @Component({
@@ -9,14 +9,16 @@ import { MoedasService } from 'src/app/services/moedas.service';
 })
 export class CryptoGameComponent implements OnInit {
 
-  constructor(private moedas : MoedasService) { }
+  constructor(private moedas : MoedasService, router : Router) { this.router = router }
 
   dadosGuar : boolean;
   informacoes;
   precoBtn;
   precoEth;
   ticker;
-  mercado: Array<any> = [];
+  mercado;
+  contador;
+  router : Router;
 
   ngOnInit(): void {
     this.dadosGuar = localStorage.getItem("Informacoes") ? true : false;
@@ -25,7 +27,9 @@ export class CryptoGameComponent implements OnInit {
       this.informacoes = [
         { Dinheiro : 35000,
           Bitcoins : 0,
-          Ethereum : 0
+          BitLucro : 0,
+          Ethereum : 0,
+          EthLucro : 0
         }
       ];
 
@@ -33,24 +37,26 @@ export class CryptoGameComponent implements OnInit {
     }
     else {
       this.informacoes = JSON.parse(localStorage.getItem("Informacoes"));
-      console.log("Deu");
-      console.log(this.informacoes);
     }
 
     this.moedas.getInfBtn().subscribe(
       data => {
         this.precoBtn = data['ticker'];
-      }
-    );
-    this.moedas.getInfEth().subscribe(
-      data => {
-        this.precoEth = data['ticker'];
+        this.precoBtn.price = Math.round(this.precoBtn.price);
+        this.mercado = this.precoBtn['markets'];
+        this.moedas.moeda = this.ticker.base;
+        clearTimeout(this.contador);
+        this.refresh();
+        for (let i = 0; i < this.mercado.length; i++) {
+          this.mercado[i].price = Math.round(this.mercado[i].price);
+        }
       }
     );
 
-    this.moedas.getInfBtn().subscribe(
-      data => {this.ticker = data['ticker'];
-      this.mercado = this.ticker['markets'];
+    this.moedas.getInfEth().subscribe(
+      data => {
+        this.precoEth = data['ticker'];
+        this.precoEth.price = Math.round(this.precoEth.price);
       }
     );
 
@@ -59,10 +65,12 @@ export class CryptoGameComponent implements OnInit {
   btn() {
     this.moedas.getInfBtn().subscribe(
       data => {this.ticker = data['ticker'];
+      console.log(this.ticker)
       this.mercado = this.ticker['markets'];
-      console.log(data);
-      console.log(this.ticker);
-      console.log(this.mercado);
+      this.moedas.moeda = this.ticker.base;
+      this.arredondar();
+      clearTimeout(this.contador);
+      this.refresh();
       }
     );
   }
@@ -70,11 +78,39 @@ export class CryptoGameComponent implements OnInit {
   eth() {
     this.moedas.getInfEth().subscribe(
       data => {this.ticker = data['ticker'];
+      console.log(this.ticker)
       this.mercado = this.ticker['markets'];
-      console.log(data);
-      console.log(this.ticker);
-      console.log(this.mercado);
+      this.moedas.moeda = this.ticker.base;
+      this.arredondar();
+      clearTimeout(this.contador);
+      this.refresh();
       }
     );
+  }
+
+  arredondar() {
+    for (let i = 0; i < this.mercado.length; i++) {
+      this.mercado[i].price = Math.round(this.mercado[i].price);
+    }
+    console.log(this.mercado);
+  }
+
+  refresh(){
+    this.contador = setTimeout(() => {
+      console.log("Entrou");
+      if(this.moedas.moeda == 'BTC'){
+        this.btn();
+        console.log("Atualizou btc");
+      }
+      else{
+        this.eth();
+        console.log("Atualizou eth");
+      }
+    }, 30000);
+  }
+
+  comprarVender (loja, preco) {
+    this.moedas.preco = preco;
+    this.router.navigate(['/cryptoGame', loja]);
   }
 }

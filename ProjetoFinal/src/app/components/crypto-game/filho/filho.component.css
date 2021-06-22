@@ -1,0 +1,13 @@
+.principal {
+  display: flex;
+  width: 10vw;
+  height: 20vh;
+  position: absolute;
+  top: 40vh;
+  left: 45vw;
+  background-color: white 0.5;
+}
+
+.principal button {
+  height: 3vh;
+}

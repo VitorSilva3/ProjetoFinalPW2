@@ -11,6 +11,9 @@ export class MoedasService {
   linkBTN = "https://api.cryptonator.com/api/full/btc-eur";
   linkETH = "https://api.cryptonator.com/api/full/eth-eur";
 
+  moeda: any = "BTC";
+  preco: any;
+
   getInfBtn() {
     return this.httpAsk.get(
       this.linkBTN,

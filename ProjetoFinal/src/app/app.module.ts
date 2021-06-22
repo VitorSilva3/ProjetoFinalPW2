@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ChooseGameComponent } from './components/choose-game/choose-game.component';
 import { BlackjackComponent } from './components/blackjack/blackjack.component';
 import { CryptoGameComponent } from './components/crypto-game/crypto-game.component';
+import { FilhoComponent } from './components/crypto-game/filho/filho.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CryptoGameComponent } from './components/crypto-game/crypto-game.compon
     HomeComponent,
     ChooseGameComponent,
     BlackjackComponent,
-    CryptoGameComponent
+    CryptoGameComponent,
+    FilhoComponent
   ],
   imports: [
     BrowserModule,

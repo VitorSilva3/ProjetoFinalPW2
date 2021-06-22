@@ -6,7 +6,8 @@
   </div>
   <div>
     <div *ngFor="let item of mercado">
-      <h3>{{item.market}} - {{item.price}} - {{item.volume}}</h3>
+      <h3 (click)="comprarVender(item.market, item.price)">{{item.market}} - {{item.price}}</h3>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
