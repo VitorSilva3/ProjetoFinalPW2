@@ -271,7 +271,7 @@ export class BlackjackComponent implements OnInit {
         if (this.pontosDealer>21)
         {
           console.log("Player ganha");
-          this.EndGame("Darrebentou");
+          this.EndGame("Darrebenta");
         } else if(this.pontosDealer>this.pontosPlayer)
         {
           console.log("Dealer ganhou");
@@ -419,6 +419,9 @@ export class BlackjackComponent implements OnInit {
       this.standButton.nativeElement.style.opacity = 0;
       this.clearButton.nativeElement.style.opacity = 100;
       this.dealButton.nativeElement.style.opacity =100;
+
+      this.contar=0;
+      this.contarDealer =0;
 
   }
 
