@@ -1,8 +1,22 @@
-<div class="principal">
-  <button (click)="sair()">X</button>
-  <h1>{{loja}}</h1>
-  <p>{{moeda}}</p>
-  <p>{{preco}}</p>
-  <button (click)="comprar()">Buy</button>
-  <button (click)="vender()">Sell</button>
-</div>>
+<div class="escurecer" (click)="sair()">
+  <div class="principal">
+    <div class="informacoes">
+      <a (click)="sair()">
+        <h3>X</h3>
+      </a>
+      <h1>{{loja}}</h1>
+      <h2>{{moeda}}</h2>
+      <h2>{{preco}}€</h2>
+    </div>
+    <div class="esquerda">
+      <a (click)="comprar()">
+        <h3>Buy</h3>
+      </a>
+    </div>
+    <div class="direita">
+      <a (click)="vender()">
+        <h3>Sell</h3>
+      </a>
+    </div>
+  </div>
+</div>

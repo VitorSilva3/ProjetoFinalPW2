@@ -13,13 +13,19 @@ export class CryptoGameComponent implements OnInit {
 
   dadosGuar : boolean;
   informacoes;
-  btcInf;
-  ethInf;
   mercado;
   contador;
+  contadorInf;
+  infQuant;
+  infLucro;
+  preco;
   router : Router;
 
   ngOnInit(): void {
+
+    this.eth();
+    this.btc();
+
     this.dadosGuar = localStorage.getItem("Informacoes") ? true : false;
 
     if (this.dadosGuar == false) {
@@ -35,20 +41,45 @@ export class CryptoGameComponent implements OnInit {
       localStorage.setItem("Informacoes", JSON.stringify(this.informacoes));
     }
     else {
-      this.informacoes = JSON.parse(localStorage.getItem("Informacoes"));
+      this.buscarInf();
     }
 
-    this.eth();
-    this.btc();
-
   }
 
+  // para sair do jogo
+  sair() {
+    this.router.navigate(["/chooseGame"]);
+  }
+
+  // buscar informações do jogador
+  buscarInf() {
+    this.informacoes = JSON.parse(localStorage.getItem("Informacoes"));
+    if (this.moedas.moeda == 'BTC') {
+      this.infQuant = this.informacoes[0].Bitcoins;
+      this.infLucro = this.informacoes[0].BitLucro;
+    }
+    else {
+      this.infQuant = this.informacoes[0].Ethereum;
+      this.infLucro = this.informacoes[0].EthLucro;
+    }
+    clearTimeout(this.contadorInf);
+    this.refreshInf();
+  }
+
+  // fazer novas buscas às informações do jogador
+  refreshInf(){
+    this.contadorInf = setTimeout(() => {
+      this.buscarInf();
+    }, 1000);
+  }
+
+  // buscar informações da bitcoin
   btc() {
     this.moedas.getInfBtn().subscribe(
-      data => {this.btcInf = data['ticker'];
-      this.btcInf.price = Math.round(this.btcInf.price);
-      this.mercado = this.btcInf['markets'];
-      this.moedas.moeda = this.btcInf.base;
+      data => {this.preco = data['ticker'];
+      this.preco.price = Math.round(this.preco.price);
+      this.mercado = this.preco['markets'];
+      this.moedas.moeda = this.preco.base;
       this.arredondar();
       clearTimeout(this.contador);
       this.refresh();
@@ -56,11 +87,13 @@ export class CryptoGameComponent implements OnInit {
     );
   }
 
+  // buscar informações da ethereum
   eth() {
     this.moedas.getInfEth().subscribe(
-      data => {this.ethInf = data['ticker'];
-      this.ethInf.price = Math.round(this.ethInf.price);
-      this.moedas.moeda = this.ethInf.base;
+      data => {this.preco = data['ticker'];
+      this.preco.price = Math.round(this.preco.price);
+      this.mercado = this.preco['markets'];
+      this.moedas.moeda = this.preco.base;
       this.arredondar();
       clearTimeout(this.contador);
       this.refresh();
@@ -68,35 +101,28 @@ export class CryptoGameComponent implements OnInit {
     );
   }
 
+  // arredonda os preços das moedas
   arredondar() {
     for (let i = 0; i < this.mercado.length; i++) {
       this.mercado[i].price = Math.round(this.mercado[i].price);
     }
-    console.log(this.mercado);
   }
 
+  // recarrega as informações das moedas
   refresh(){
-    console.log(this.moedas.moeda)
-    console.log("Ativou")
     this.contador = setTimeout(() => {
-      console.log("Entrou");
       if(this.moedas.moeda == 'BTC'){
         this.btc();
-        console.log("Atualizou btc");
       }
       else{
         this.eth();
-        console.log("Atualizou eth");
       }
     }, 30000);
   }
 
+  // abre uma janela para comprar ou vender as moedas
   comprarVender (loja, preco) {
     this.moedas.preco = preco;
     this.router.navigate(['/cryptoGame', loja]);
-  }
-
-  sair() {
-    this.router.navigate(["/chooseGame"]);
   }
 }

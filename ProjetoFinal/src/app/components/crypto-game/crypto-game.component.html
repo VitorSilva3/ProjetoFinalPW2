@@ -1,13 +1,29 @@
-<div>
-  <div>
-    <button (click)="sair()">Sair</button>
-    <h1>{{informacoes[0].Dinheiro}} €</h1>
-    <a (click)="btc()"><h2>BITCOIN - {{informacoes[0].Bitcoins}} - {{informacoes[0].BitLucro}} - {{btcInf.price}}</h2></a>
-    <a (click)="eth()"><h2>ETHEREUM - {{informacoes[0].Ethereum}} - {{informacoes[0].EthLucro}} - {{ethInf.price}}</h2></a>
+<div class="principal">
+  <div class="menu">
+    <div class="esquerda">
+      <a (click)="sair()" class="sair"><h3>Sair</h3></a>
+      <h3>Teu Dinheiro {{informacoes[0].Dinheiro}} €</h3>
+    </div>
+    <div class="direita">
+      <a (click)="btc()">
+        <h3>BITCOIN</h3>
+      </a>
+      <a (click)="eth()">
+        <h3>ETHEREUM</h3>
+      </a>
+    </div>
   </div>
-  <div>
-    <div *ngFor="let item of mercado">
-      <h3 (click)="comprarVender(item.market, item.price)">{{item.market}} - {{item.price}}</h3>
+  <div class="inf">
+    <div>
+      <h3>Tem {{infQuant}} {{preco.base}}</h3>
+      <h3>Lucro {{infLucro}}</h3>
+      <h3>Preço atual {{preco.price}}</h3>
+    </div>
+  </div>
+  <div class="mercados">
+    <div *ngFor="let item of mercado" (click)="comprarVender(item.market, item.price)">
+      <h3>{{item.market}}</h3>
+      <h4>Preço: {{item.price}}€</h4>
     </div>
   </div>
 </div>

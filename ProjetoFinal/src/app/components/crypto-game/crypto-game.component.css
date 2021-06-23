@@ -1,5 +1,100 @@
-div {
- background-color: aliceblue;
- width: 100%;
- padding: 1vw;
+.principal {
+ width: 100vw;
+ height: 90vh;
+ padding-top: 10vh;
+}
+
+.menu {
+  background-color: rgb(21, 21, 21);
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+.menu h3{
+  display: inline-block;
+  margin: 2vh;
+}
+
+.esquerda {
+  display: inline-block;
+  width: 35vw;
+  text-align: left;
+}
+
+.direita {
+  display: inline-block;
+  width: 35vw;
+  text-align: right;
+}
+
+.sair {
+  margin: 1vh;
+  padding: 1vh;
+  background-color: rgb(11, 11, 11);
+}
+
+.inf {
+  width: 70vw;
+  margin-left: 15vw;
+  background-color: rgb(41, 41, 41);
+}
+
+.inf div {
+  width: 40vw;
+  margin: auto;
+  text-align: center;
+}
+
+.inf h3 {
+  display: inline-block;
+  margin: 1vw;
+  text-align: center;
+}
+
+.mercados {
+  width: 70vw;
+  margin-left: 15vw;
+  background-color: rgb(61, 61, 61);
+  color: black;
+}
+
+.mercados div {
+  display: inline-block;
+  width: 33vw;
+  margin: 1vw;
+  padding-bottom: 2vh;
+  background-color: gainsboro;
+}
+
+.mercados h3, h4 {
+  margin: 0px;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+@media (max-width: 767.9px) {
+  .principal {
+    font-size: 65%;
+    padding-top: 5vh;
+  }
+
+  .esquerda {
+    width: 70vw;
+    text-align: center;
+  }
+
+  .direita {
+    width: 70vw;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .principal {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 992px) {
 }

@@ -1,13 +1,76 @@
-.principal {
-  display: flex;
-  width: 10vw;
-  height: 20vh;
+.escurecer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.50);
   position: absolute;
-  top: 40vh;
-  left: 45vw;
-  background-color: white 0.5;
+  left: 0;
+  top: 0;
 }
 
-.principal button {
-  height: 3vh;
+.principal {
+  width: 20vw;
+  position: absolute;
+  top: 30vh;
+  left: 40vw;
+  background-color: rgb(100, 100, 100);
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+.informacoes h1, h2{
+  text-align: center;
+}
+
+.informacoes h3 {
+  display: inline-block;
+  margin-top: 2px;
+  margin-left: 2px;
+  padding: 2vh;
+  background-color: rgb(70, 70, 70);
+}
+
+.esquerda {
+  display: inline-block;
+  width: 10vw;
+  text-align: center;
+  background-color: rgb(85, 85, 85);
+}
+
+.direita {
+  display: inline-block;
+  width: 10vw;
+  text-align: center;
+  background-color: rgb(85, 85, 85);
+}
+
+@media (max-width: 767.9px) {
+  .principal {
+    font-size: 65%;
+    width: 40vw;
+    left: 30vw;
+  }
+
+  .direita {
+    width: 20vw;
+  }
+
+  .esquerda {
+    width: 20vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.9px) {
+  .principal {
+    font-size: 75%;
+    width: 40vw;
+    left: 30vw;
+  }
+
+  .direita {
+    width: 20vw;
+  }
+
+  .esquerda {
+    width: 20vw;
+  }
 }
