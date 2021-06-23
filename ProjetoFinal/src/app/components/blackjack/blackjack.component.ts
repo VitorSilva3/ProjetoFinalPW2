@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { Carta } from 'src/app/classes/carta';
 import { CartasService } from 'src/app/services/cartas.service';
 
@@ -25,9 +26,10 @@ export class BlackjackComponent implements OnInit {
 
 
 
-
+  router : Router;
   Decks : CartasService;
-  constructor(private cartasService : CartasService) {
+  constructor(private cartasService : CartasService, router : Router) {
+    this.router = router;
     this.Decks = cartasService;
    }
 
@@ -67,6 +69,9 @@ export class BlackjackComponent implements OnInit {
 
   canBet = true;
 
+  sair() {
+    this.router.navigate(["/chooseGame"]);
+  }
 
   bet(valor : number)
   {

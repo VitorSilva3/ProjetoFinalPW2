@@ -13,9 +13,8 @@ export class CryptoGameComponent implements OnInit {
 
   dadosGuar : boolean;
   informacoes;
-  precoBtn;
-  precoEth;
-  ticker;
+  btcInf;
+  ethInf;
   mercado;
   contador;
   router : Router;
@@ -39,35 +38,17 @@ export class CryptoGameComponent implements OnInit {
       this.informacoes = JSON.parse(localStorage.getItem("Informacoes"));
     }
 
-    this.moedas.getInfBtn().subscribe(
-      data => {
-        this.precoBtn = data['ticker'];
-        this.precoBtn.price = Math.round(this.precoBtn.price);
-        this.mercado = this.precoBtn['markets'];
-        this.moedas.moeda = this.ticker.base;
-        clearTimeout(this.contador);
-        this.refresh();
-        for (let i = 0; i < this.mercado.length; i++) {
-          this.mercado[i].price = Math.round(this.mercado[i].price);
-        }
-      }
-    );
-
-    this.moedas.getInfEth().subscribe(
-      data => {
-        this.precoEth = data['ticker'];
-        this.precoEth.price = Math.round(this.precoEth.price);
-      }
-    );
+    this.eth();
+    this.btc();
 
   }
 
-  btn() {
+  btc() {
     this.moedas.getInfBtn().subscribe(
-      data => {this.ticker = data['ticker'];
-      console.log(this.ticker)
-      this.mercado = this.ticker['markets'];
-      this.moedas.moeda = this.ticker.base;
+      data => {this.btcInf = data['ticker'];
+      this.btcInf.price = Math.round(this.btcInf.price);
+      this.mercado = this.btcInf['markets'];
+      this.moedas.moeda = this.btcInf.base;
       this.arredondar();
       clearTimeout(this.contador);
       this.refresh();
@@ -77,10 +58,9 @@ export class CryptoGameComponent implements OnInit {
 
   eth() {
     this.moedas.getInfEth().subscribe(
-      data => {this.ticker = data['ticker'];
-      console.log(this.ticker)
-      this.mercado = this.ticker['markets'];
-      this.moedas.moeda = this.ticker.base;
+      data => {this.ethInf = data['ticker'];
+      this.ethInf.price = Math.round(this.ethInf.price);
+      this.moedas.moeda = this.ethInf.base;
       this.arredondar();
       clearTimeout(this.contador);
       this.refresh();
@@ -96,10 +76,12 @@ export class CryptoGameComponent implements OnInit {
   }
 
   refresh(){
+    console.log(this.moedas.moeda)
+    console.log("Ativou")
     this.contador = setTimeout(() => {
       console.log("Entrou");
       if(this.moedas.moeda == 'BTC'){
-        this.btn();
+        this.btc();
         console.log("Atualizou btc");
       }
       else{
@@ -112,5 +94,9 @@ export class CryptoGameComponent implements OnInit {
   comprarVender (loja, preco) {
     this.moedas.preco = preco;
     this.router.navigate(['/cryptoGame', loja]);
+  }
+
+  sair() {
+    this.router.navigate(["/chooseGame"]);
   }
 }

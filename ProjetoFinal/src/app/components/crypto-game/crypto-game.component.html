@@ -1,8 +1,9 @@
 <div>
   <div>
+    <button (click)="sair()">Sair</button>
     <h1>{{informacoes[0].Dinheiro}} €</h1>
-    <a (click)="btn()"><h2>BITCOIN - {{informacoes[0].Bitcoins}} - {{precoBtn.price}}</h2></a>
-    <a (click)="eth()"><h2>ETHEREUM - {{informacoes[0].Ethereum}} - {{precoEth.price}}</h2></a>
+    <a (click)="btc()"><h2>BITCOIN - {{informacoes[0].Bitcoins}} - {{informacoes[0].BitLucro}} - {{btcInf.price}}</h2></a>
+    <a (click)="eth()"><h2>ETHEREUM - {{informacoes[0].Ethereum}} - {{informacoes[0].EthLucro}} - {{ethInf.price}}</h2></a>
   </div>
   <div>
     <div *ngFor="let item of mercado">
